@@ -2,7 +2,7 @@
 window.DATE_CONFIG = {
   // Kam se posílají odpovědi (přes https://formsubmit.co).
   // Dej sem alias z aktivačního e-mailu, ne skutečnou adresu.
-  formSubmitEmail: "YOUR_EMAIL_HERE",
+  formSubmitEmail: "171f8171d1a4c303e8607ca659d01c12",
 
   // Jména v rozbalovacím seznamu (pořadí = pořadí v menu).
   // Pokračovat jde jen s "pravým" jménem, u ostatních se ukáže náhodná hláška z "jokes".
