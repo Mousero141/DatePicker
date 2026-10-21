@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Půjdeš se mnou na rande?</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="card">
+    <div class="progress"><div class="progress-bar" id="progressBar"></div></div>
+
+    <!-- 0: otázka, srdce, ano/ne -->
+    <section class="step active" data-step="0">
+      <h1>Půjdeš se mnou na rande?</h1>
+      <div class="big-emoji">🩷</div>
+      <div class="actions center">
+        <button class="btn primary" id="yesBtn">Ano 🥰</button>
+        <button class="btn ghost" id="noBtn">Ne 🫣</button>
+      </div>
+    </section>
+
+    <!-- 1: datum a čas -->
+    <section class="step" data-step="1">
+      <div class="big-emoji">🗓️</div>
+      <h2>Kdy máš čas?</h2>
+      <div class="field">Datum
+        <div class="row">
+          <select id="daySelect" aria-label="Den"></select>
+          <select id="monthSelect" aria-label="Měsíc" class="grow"></select>
+          <select id="yearSelect" aria-label="Rok"></select>
+        </div>
+      </div>
+      <div class="field">Čas
+        <div class="row">
+          <select id="hourSelect" aria-label="Hodina"></select>
+          <span class="colon">:</span>
+          <select id="minuteSelect" aria-label="Minuta"></select>
+        </div>
+      </div>
+      <p class="error" id="err1"></p>
+      <div class="actions">
+        <button class="btn ghost" data-back>Zpět</button>
+        <button class="btn primary" data-next>Dál</button>
+      </div>
+    </section>
+
+    <!-- 2: aktivita a/nebo jídlo -->
+    <section class="step" data-step="2">
+      <h2>Co budeme dělat?</h2>
+      <div class="big-emoji">🥂</div>
+      <p class="hint">Aktivita, jídlo, nebo obojí</p>
+      <h3 class="group-title">✨ Aktivita</h3>
+      <div class="options" id="activityOptions"></div>
+      <h3 class="group-title">🍴 Jídlo</h3>
+      <div class="options" id="foodOptions"></div>
+      <p class="error" id="err2"></p>
+      <div class="actions">
+        <button class="btn ghost" data-back>Zpět</button>
+        <button class="btn primary" data-next>Dál</button>
+      </div>
+    </section>
+
+    <!-- 3: kdo jsi + poznámky -->
+    <section class="step" data-step="3">
+      <h2>Ještě něco?</h2>
+      <div class="big-emoji">✉️</div>
+      <label class="field">Kdo jsi?
+        <select id="nameSelect">
+          <option value="">Vyber…</option>
+        </select>
+      </label>
+      <p class="joke" id="joke"></p>
+      <label class="field">Poznámky
+        <textarea id="notesInput" rows="3" placeholder="Nepovinné"></textarea>
+      </label>
+      <p class="error" id="err3"></p>
+      <div class="actions">
+        <button class="btn ghost" data-back>Zpět</button>
+        <button class="btn primary" data-next>Shrnutí</button>
+      </div>
+    </section>
+
+    <!-- 4: shrnutí -->
+    <section class="step" data-step="4">
+      <div class="big-emoji">📋</div>
+      <h2>Shrnutí</h2>
+      <dl class="summary" id="summary"></dl>
+      <p class="error" id="sendErr"></p>
+      <div class="actions">
+        <button class="btn ghost" data-back>Upravit</button>
+        <button class="btn primary" id="sendBtn">Odeslat 💘</button>
+      </div>
+    </section>
+
+    <!-- 5: hotovo -->
+    <section class="step" data-step="5">
+      <h2>Platí, máme rande! 🥂</h2>
+      <div class="big-emoji">🩷</div>
+      <p>Odpověď je odeslaná. Těším se! 😊</p>
+    </section>
+  </main>
+
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
